@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}聯絡我們 - 智能未來科技有限公司{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <h2>聯絡我們</h2>
+        <p class="hero-section__description">
+            無論您有任何關於AI+AOI自動檢測設備的疑問，或想了解更多關於我們的服務，歡迎隨時與我們聯繫。
+        </p>
+    </section>
+    
+    <section class="service-section">
+        <h3>公司資訊</h3>
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="service-icon">📍</div>
+                <p><strong>地址</strong></p>
+                <p>台灣高雄市鳳山區文龍路85號3樓</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📞</div>
+                <p><strong>聯絡電話</strong></p>
+                <p>(07)777-7152</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✉️</div>
+                <p><strong>Email</strong></p>
+                <p>Alvis@airuture.com.tw</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🕒</div>
+                <p><strong>營業時間</strong></p>
+                <p>週一至週五 8:30-17:30</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-form">
+        <h3>聯絡表單</h3>
+        <form method="POST">
+            <div class="form-group">
+                <label>姓名：</label>
+                <input type="text" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>公司名稱：</label>
+                <input type="text" name="company">
+            </div>
+            
+            <div class="form-group">
+                <label>聯絡電話：</label>
+                <input type="tel" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label>電子郵件：</label>
+                <input type="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>需求類型：</label>
+                <select name="inquiry_type">
+                    <option value="product">產品詢問</option>
+                    <option value="service">技術服務</option>
+                    <option value="partnership">合作提案</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>留言內容：</label>
+                <textarea name="message" placeholder="請詳細描述您的需求，我們將盡快與您聯繫..." required></textarea>
+            </div>
+            
+            <button type="submit" class="primary-btn">送出</button>
+        </form>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 表單提交事件
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            // 可在這裡加入表單驗證邏輯
+            // 此處為示例，實際使用時可能需要修改
+        });
+    });
+</script>
+{% endblock %}

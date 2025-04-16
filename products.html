@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}產品介紹 - 智能未來科技有限公司{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <h2 class="hero-section__title">產品介紹</h2>
+        <p class="hero-section__description">
+            探索我們為不同產業打造的AI+AOI自動化檢測解決方案，提高您的生產效率與品質控制。
+        </p>
+        <img src="{{ url_for('static', filename='products-banner.jpg') }}" alt="產品展示" class="hero-section__image">
+    </section>
+
+    <section class="products-grid">
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='product1.jpg') }}" alt="AI視覺檢測系統" class="product-image">
+            <h3>AI視覺檢測系統</h3>
+            <p>針對電子零件、PCB板、半導體等小型精密元件的外觀缺陷檢測，具備極高的精度與速度。</p>
+            <a href="/products/vision-system" class="detail-btn">了解更多</a>
+        </div>
+        
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='product2.jpg') }}" alt="智慧生產線監控系統" class="product-image">
+            <h3>智慧生產線監控系統</h3>
+            <p>整合型生產線監控系統，結合多點檢測，能夠全面監控生產流程中的每個環節。</p>
+            <a href="/products/monitoring-system" class="detail-btn">了解更多</a>
+        </div>
+        
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='product3.jpg') }}" alt="雲端數據分析平台" class="product-image">
+            <h3>雲端數據分析平台</h3>
+            <p>強大的AI數據分析工具，能夠進行生產數據挖掘、趨勢分析與預測，協助企業做出更明智的決策。</p>
+            <a href="/products/data-platform" class="detail-btn">了解更多</a>
+        </div>
+    </section>
+
+    <section class="industries">
+        <h3 class="section-title">適用產業</h3>
+        <div class="industry-list">
+            <div class="industry-item">
+                <div class="industry-icon">🔌</div>
+                <h4>電子製造</h4>
+                <p>PCB檢測、電子元件檢測、焊接品質監控</p>
+            </div>
+            <div class="industry-item">
+                <div class="industry-icon">💻</div>
+                <h4>半導體產業</h4>
+                <p>晶圓檢測、封裝品質檢測、微型缺陷識別</p>
+            </div>
+            <div class="industry-item">
+                <div class="industry-icon">🔧</div>
+                <h4>精密機械</h4>
+                <p>零件尺寸測量、表面缺陷檢測、裝配品質監控</p>
+            </div>
+            <div class="industry-item">
+                <div class="industry-icon">💊</div>
+                <h4>醫療製造</h4>
+                <p>醫療器材檢測、藥品包裝檢查、無塵環境監控</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>需要客製化的解決方案嗎？</h2>
+        <p>我們的專業團隊可以依據您的需求打造專屬的AI+AOI檢測系統</p>
+        <div class="cta-buttons">
+            <a href="/contact" class="primary-btn">免費諮詢</a>
+        </div>
+    </section>
+{% endblock %}

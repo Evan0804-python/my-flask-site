@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}首頁 - 智能未來科技有限公司{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <h2>歡迎來到智能未來科技</h2>
+        <p class="hero-section__description">
+            我們致力於結合 AI 與工業自動化機器，打造更智能化的未來。
+            專注於AI+AOI自動檢測設備，為製造業提供尖端的人工智慧驅動自動光學檢測解決方案。
+        </p>
+        <img src="{{ url_for('static', filename='hero-banner.jpg') }}" alt="智能科技視覺" class="hero-section__image">
+    </section>
+    
+    <section class="tech-grid">
+        <div class="tech-card">
+            <div class="tech-icon">🔍</div>
+            <h3>AI智能識別</h3>
+            <p>採用先進的深度學習演算法，精確識別各類產品缺陷，識別率高達99.8%</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">📊</div>
+            <h3>即時監控系統</h3>
+            <p>全天候即時監控生產線品質，異常立即預警，協助企業提前發現問題</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">⚙️</div>
+            <h3>客製化解決方案</h3>
+            <p>依據不同產業需求，提供量身定制的自動檢測系統，適用多領域</p>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <h2>準備好升級您的自動檢測系統了嗎？</h2>
+        <p>與智能未來科技合作，為您的生產線導入最先進的AI+AOI解決方案</p>
+        <div class="cta-buttons">
+            <a href="/contact" class="primary-btn">免費諮詢</a>
+            <a href="/products" class="secondary-btn">瀏覽產品</a>
+        </div>
+    </section>
+{% endblock %}
+

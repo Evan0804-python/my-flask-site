@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}技術專區 - 智能未來科技有限公司{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <h2 class="hero-section__title">技術專區</h2>
+        <p class="hero-section__description">
+            探索我們最尖端的AI技術與自動化解決方案，讓您的生產線更智能、更高效。
+        </p>
+        <img src="{{ url_for('static', filename='tech-banner.jpg') }}" alt="AI技術視覺化" class="hero-section__image">
+    </section>
+
+    <section class="tab-container">
+        <h2>核心技術</h2>
+        <div class="tab-buttons">
+            <button class="tab-button active">視覺識別系統</button>
+            <button class="tab-button">雲端管理平台</button>
+            <button class="tab-button">數據分析工具</button>
+        </div>
+        <div class="tab-content active">
+            <h3>先進視覺識別系統</h3>
+            <p>結合多角度攝影機與AI深度學習演算法，能夠準確識別產品表面及結構缺陷，包括刮傷、凹痕、顏色偏差、尺寸誤差等問題。</p>
+            <img class="tech-banner" src="{{ url_for('static', filename='vision-system.jpg') }}" alt="視覺識別系統">
+        </div>
+        <div class="tab-content">
+            <h3>智能雲端管理平台</h3>
+            <p>所有檢測數據即時上傳至雲端平台，管理人員可透過電腦或手機隨時查看生產線狀態，設定自動警報與通知機制。</p>
+            <img class="tech-banner" src="{{ url_for('static', filename='cloud-platform.jpg') }}" alt="雲端管理平台">
+        </div>
+        <div class="tab-content">
+            <h3>生產數據分析工具</h3>
+            <p>強大的數據分析工具，能夠生成詳細的生產報表，分析缺陷趨勢與原因，協助企業持續優化生產流程。</p>
+            <img class="tech-banner" src="{{ url_for('static', filename='data-analysis.jpg') }}" alt="數據分析工具">
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>想了解我們的技術如何應用於您的產業？</h2>
+        <div class="cta-buttons">
+            <a href="/contact" class="primary-btn">聯絡我們</a>
+            <a href="/products" class="secondary-btn">瀏覽產品</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // 移除所有活動狀態
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // 設置當前標籤為活動狀態
+                button.classList.add('active');
+                tabContents[index].classList.add('active');
+            });
+        });
+    });
+</script>
+{% endblock %}

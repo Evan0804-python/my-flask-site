@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}智能未來科技有限公司{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="智能未來科技有限公司 Logo">
+        <h1>智能未來科技有限公司</h1>
+    </header>
+    
+    <nav>
+        <a href="/">首頁</a> |
+        <a href="/about">關於我們</a> |
+        <a href="/technology">技術專區</a> |
+        <a href="/products">產品介紹</a> |
+        <a href="/contact">聯絡我們</a>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>© 2024 智能未來科技有限公司 | 保留所有權利</p>
+        <p>專業提供AI+AOI自動檢測設備解決方案</p>
+    </footer>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

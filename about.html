@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}關於我們 - 智能未來科技有限公司{% endblock %}
+
+{% block content %}
+    <!-- 公司介紹區塊 -->
+    <section class="hero-section">
+        <h2 class="hero-section__title">關於我們</h2>
+        <p class="hero-section__description">
+            我們致力於結合人工智慧與智慧科技，打造創新的數位解決方案，實現企業智慧轉型。
+        </p>
+        <img src="{{ url_for('static', filename='about-banner.jpg') }}" alt="公司主視覺圖像" class="hero-section__image">
+    </section>
+
+    <!-- 核心價值 -->
+    <section class="core-values">
+        <h3 class="section-title">我們的核心價值</h3>
+        <ul class="core-values__list">
+            <li>創新為本，推動技術發展</li>
+            <li>以人為中心，設計思維導向</li>
+            <li>穩定可靠的技術支援</li>
+            <li>攜手合作，共創未來</li>
+        </ul>
+    </section>
+
+    <!-- 公司沿革 -->
+    <section class="company-history">
+        <h3 class="section-title">公司沿革</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="timeline-item__year">2019 年</h4>
+                <p class="timeline-item__description">公司成立，專注於 AI 技術研發。</p>
+            </div>
+            <div class="timeline-item">
+                <h4 class="timeline-item__year">2021 年</h4>
+                <p class="timeline-item__description">推出首個智慧客服解決方案。</p>
+            </div>
+            <div class="timeline-item">
+                <h4 class="timeline-item__year">2023 年</h4>
+                <p class="timeline-item__description">跨足智慧製造與醫療影像領域。</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <h2>想了解更多我們的服務嗎？</h2>
+        <div class="cta-buttons">
+            <a href="/contact" class="primary-btn">聯絡我們</a>
+            <a href="/products" class="secondary-btn">瀏覽產品</a>
+        </div>
+    </section>
+{% endblock %}
+
